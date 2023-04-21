@@ -21,16 +21,16 @@
   </head>
   <body>
     <!-- Ganti Audio di sini -->
-    <audio src="https://feeldreams.github.io/vibescorona.mp3" id="linkmp3" class="sembunyi"></audio>
+    <audio src="ramadhan.mp3" id="linkmp3" class="sembunyi"></audio>
 
     <div id="bodyblur">
-      <!-- Wallpaper --><img src="https://feeldreams.github.io/wp4.jpg" id="wallpaper" />
+      <!-- Wallpaper --><img src="img/mesjid.jpg" id="wallpaper" />
       <div id="beneranblur"></div>
     </div>
 
     <div id="Content">
       <div id="kadoIn"><!-- Tombol Surat --><img src="https://feeldreams.github.io/kadoin.png" /></div>
-      <p id="ket">Klik Hadiah Nya!</p>
+      <p id="ket">THR Buat Anda!</p>
 
       <div class="kumpulanstiker">
         <!-- Stiker untuk Konten -->
@@ -42,24 +42,24 @@
         <img src="https://feeldreams.github.io/smprt.gif" id="fotostiker6" />
         <img src="https://feeldreams.github.io/ciumin.gif" id="fotostiker7" />
       </div>
-      <p id="halo" class="halo">Hai, Kamu!</p>
+      <p id="halo" class="halo"></p>
       <!-- Konten Pesan Setelah Aksi -->
       <p id="halo2" class="halo">Sekian ✨</p>
 
       <!-- Konten Pesan Akhir -->
-      <p id="kalimatbawah">Semangat Terus yaa ❤️</p>
-      <p id="kalimatbawah2" class="sembunyi">Kamu Hebat Banget ❤️</p>
-      <p id="kalimatbawah3" class="sembunyi">Aku Bangga Sama Kamu ❤️</p>
+      <p id="kalimatbawah">Jangan Lupa THR nya ❤️</p>
+      <p id="kalimatbawah2" class="sembunyi">Gak Ngasih THR !!</p>
+      <p id="kalimatbawah3" class="sembunyi">Gak Di Maafin 🤣</p>
 
       <div>
         <blockquote id="bq" data-text="&#9829;">
           <!-- Konten Pembukaan -->
-          <p id="kalimat">Aku Mau Nitip Pesan Nih...</p>
-          <p id="kalimatb">Teruslah semangat dalam menyelesaikan pekerjaanmu hari ini. ❤️</p>
-          <p id="kalimatc">Aku yakin kamu pasti bisa melakukannya dengan baik seperti biasanya. 😊</p>
-          <p id="kalimatd">Jangan lupa untuk istirahat dan jaga kesehatanmu ya. 😉</p>
-          <p id="kalimate">Semoga harimu menyenangkan. 😊</p>
-          <p id="kalimatf">Semangat !!! 😘</p>
+          <p id="kalimat">Maaf THR Bukan Uang atau Barang.😅</p>
+          <p id="kalimatb">Tapi Mau Ngucapin Minal Aidin Wal Faizin 🙏</p>
+          <p id="kalimatc">Mohon Maaf Lahir dan Batin. 🙏</p>
+          <p id="kalimatd">Mohon Maaf Untuk Semua Kesalahan yang di Sengaja😁</p>
+          <p id="kalimate">Atau pun yang Sudah di Rencanakan😅</p>
+          <p id="kalimatf">Sekali Lagi Maafin Yah 🙏</p>
 
           <p id="opsL">Klik untuk Lanjut</p>
         </blockquote>
@@ -69,7 +69,7 @@
       <div id="Tombol"><a id="By">&#128140; Balas</a></div>
 
       <!-- Pesan yang dikirim ke WhatsApp -->
-      <span id="pesanWA" class="sembunyi">Makasih Hadiahnya Reyhan 😁👌!</span>
+      <span id="pesanWA" class="sembunyi">Iyaa, Di Maafin 🙏😊</span>
     </div>
 
     <!-- Jangan Edit Bagian Ini -->
@@ -123,11 +123,241 @@
           kadoIn.style = "transition:all .8s ease;transform:scale(10);opacity:0";
           wallpaper.style = "transform: scale(1.5);";
           ket.style = "display:none";
-          setTimeout(mulainama, 700);
+          Swal.fire({
+            title: "Masukkan nama Anda",
+            input: "text",
+            inputAttributes: {
+              autocapitalize: "off",
+            },
+            // showCancelButton: true,
+            confirmButtonText: "Simpan",
+            // cancelButtonText: "Batal",
+            // showLoaderOnConfirm: true,
+            preConfirm: (nama) => {
+              // Mengambil nilai input dan menampilkannya di konsol
+              // console.log(`Nama yang dimasukkan: ${nama}`);
+              vketikhalo = "Hai " + nama + "!";
+              // name.value = "hay";
+              setTimeout(mulainama, 700);
+            },
+            // allowOutsideClick: () => !Swal.isLoading(),
+          });
         }
       };
     </script>
-    <script src="https://feeldreams.github.io/singkat/script.js"></script>
+    <script>
+      async function mulainama() {
+        // window.location.replace("https://www.feeldream.my.id/2023/01/script-html-bucin.html");
+
+        kadoIn.style = "display:none";
+        ket.style = "display:none";
+        Content.style = "opacity:1;margin-top:2vh";
+        bodyblur.style = "opacity:.7";
+        wallpaper.style = "transform: scale(1);";
+        fotostiker.style = "display:inline-flex;";
+        setTimeout(ftmuncul, 200);
+        setTimeout(kethalo, 500);
+      }
+
+      function ftmuncul() {
+        if (ftganti == 0) {
+          fotostiker.src = deffotostiker;
+          fotostiker.style = "display:inline-flex;opacity:1;transform:scale(1)";
+        }
+        if (ftganti == 1) {
+          fotostiker.src = fotostiker2.src;
+          fotostiker.style = "display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";
+        }
+        if (ftganti == 2) {
+          fotostiker.src = fotostiker3.src;
+          fotostiker.style = "display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";
+        }
+        if (ftganti == 3) {
+          fotostiker.src = fotostiker4.src;
+          fotostiker.style = "display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";
+        }
+        if (ftganti == 4) {
+          fotostiker.src = fotostiker5.src;
+          fotostiker.style = "display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";
+        }
+        if (ftganti == 5) {
+          fotostiker.src = fotostiker6.src;
+          fotostiker.style = "display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";
+        }
+        if (ftganti == 6) {
+          fotostiker.src = fotostiker7.src;
+          fotostiker.style = "display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";
+        }
+        if (ftganti == 7) {
+          fotostiker.src = fotostiker8.src;
+          fotostiker.style = "display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";
+        }
+      }
+      function fthilang() {
+        fotostiker.style = "display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(.1)";
+      }
+      function jjfoto() {
+        fotostiker.style.animation = "rto .8s infinite alternate";
+        setInterval(createHeart, 200);
+      }
+
+      function kethalo() {
+        new TypeIt("#halo", {
+          strings: ["" + vketikhalo],
+          startDelay: 50,
+          speed: 30,
+          waitUntilVisible: true,
+          afterComplete: function () {
+            halo.innerHTML = vketikhalo;
+            setTimeout(bqmuncul, 200);
+          },
+        }).go();
+      }
+      function kethalo2() {
+        bqhilang();
+        fthilang();
+        ftganti = 6;
+        setTimeout(ftmuncul, 400);
+        halo.style = "display:none";
+        new TypeIt("#halo2", {
+          strings: ["" + vketikhalo2],
+          startDelay: 50,
+          speed: 60,
+          waitUntilVisible: true,
+          afterComplete: function () {
+            bq.style = "";
+            halo2.innerHTML = vketikhalo2;
+            setTimeout(munculbwh, 800);
+            setInterval(createHeart, 400);
+            setTimeout(tombol, 7000);
+          },
+        }).go();
+      }
+
+      defkalimatbawah = kalimatbawah.innerHTML;
+      function munculbwh() {
+        kalimatbawah.innerHTML = defkalimatbawah;
+        setTimeout(munculbwh2, 2000);
+        otomatis();
+      }
+      function munculbwh2() {
+        kalimatbawah.innerHTML = kalimatbawah2.innerHTML;
+        setTimeout(munculbwh3, 2000);
+        otomatis();
+      }
+      function munculbwh3() {
+        kalimatbawah.innerHTML = kalimatbawah3.innerHTML;
+        setTimeout(munculbwh, 2000);
+        otomatis();
+      }
+      function otomatis() {
+        kalimatbawah.style = "position:relative;opacity:0;transform:scale(.3);";
+        setTimeout(anim, 300);
+      }
+      function anim() {
+        kalimatbawah.style = "position:relative;opacity:1;transform:scale(1);";
+      }
+
+      function bqmuncul() {
+        bq.style = "position:relative;opacity:1;visibility:visible;transform: scale(1);margin-top:0";
+        mulaiketik1();
+        fungsi = 1;
+      }
+      function bqhilang() {
+        wallpaper.style = "transform: scale(2);";
+        bodyblur.style = "opacity:.3";
+        bq.style = "position:relative;transition:all .7s ease;";
+      }
+      function otokal() {
+        kalimat.style = "opacity:0;transform:scale(.3);";
+        setTimeout(anikal, 300);
+      }
+      function anikal() {
+        setTimeout(otopsL, 700);
+        kalimat.style = "opacity:1;transform:scale(1);";
+      }
+      function otopsL() {
+        opsL.style.opacity = ".8";
+        opsLcheck += 1;
+        opsLclick = 1;
+      }
+
+      function tombol() {
+        wallpaper.style = "transform: scale(1);";
+        Tombol.style = "opacity:1;transform: scale(1);";
+        fungsi = 1;
+      }
+      document.getElementById("By").onclick = function () {
+        if (fungsi == 1) {
+          menuju();
+        }
+      };
+
+      vketik1 = kalimat.innerHTML;
+      kalimat.innerHTML = "";
+      function mulaiketik1() {
+        new TypeIt("#kalimat", {
+          strings: ["" + vketik1],
+          startDelay: 400,
+          speed: 50,
+          deleteSpeed: 20,
+          breakLines: false,
+          waitUntilVisible: true,
+          lifelike: true,
+          afterComplete: function () {
+            otopsL();
+          },
+        }).go();
+      }
+
+      opsLclick = 0;
+      opsLcheck = 0;
+      document.getElementById("bq").addEventListener("click", myCheck);
+      function myCheck() {
+        if (opsLclick == 1) {
+          if (opsLcheck == 1) {
+            kalimat.innerHTML = kalimatb.innerHTML;
+            otokal();
+            fthilang();
+            ftganti = 1;
+            setTimeout(ftmuncul, 300);
+          }
+          if (opsLcheck == 2) {
+            kalimat.innerHTML = kalimatc.innerHTML;
+            otokal();
+            fthilang();
+            ftganti = 2;
+            setTimeout(ftmuncul, 300);
+          }
+          if (opsLcheck == 3) {
+            kalimat.innerHTML = kalimatd.innerHTML;
+            otokal();
+            fthilang();
+            ftganti = 3;
+            setTimeout(ftmuncul, 300);
+          }
+          if (opsLcheck == 4) {
+            kalimat.innerHTML = kalimate.innerHTML;
+            otokal();
+            fthilang();
+            ftganti = 4;
+            setTimeout(ftmuncul, 300);
+          }
+          if (opsLcheck == 5) {
+            kalimat.innerHTML = kalimatf.innerHTML;
+            otokal();
+            fthilang();
+            ftganti = 5;
+            setTimeout(ftmuncul, 300);
+          }
+          if (opsLcheck == 6) {
+            kethalo2();
+          }
+          opsL.style.opacity = "0";
+          opsLclick = 0;
+        }
+      }
+    </script>
     <!-- Sampai Sini -->
   </body>
 </html>
